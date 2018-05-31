@@ -49,14 +49,21 @@ public interface Problem {
 				if (expectedOutput.equalsIgnoreCase(output)) {
 					sb.append("PASSOU");
 				} else {
-					sb.append("FALHOU - Valor esperado: ")
+					sb.append("FALHOU")
+					    .append(System.lineSeparator())
+					    .append("Valor esperado: ")
+					    .append(System.lineSeparator())
 						.append(expectedOutput)
-						.append(", Recebeu: ")
+						.append(System.lineSeparator())
+						.append("Sua resposta: ")
+						.append(System.lineSeparator())
 						.append(output);
 				}
 				
 				System.out.println(sb);
 			}
 		}
+		
+		System.out.println();
 	}
 }
